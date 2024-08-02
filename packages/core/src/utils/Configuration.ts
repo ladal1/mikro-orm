@@ -509,7 +509,7 @@ export interface SeederOptions {
 
 export interface PoolConfig {
   name?: string;
-  afterCreate?: Function;
+  afterCreate?: (...a: unknown[]) => unknown;
   min?: number;
   max?: number;
   refreshIdle?: boolean;
